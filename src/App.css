@@ -15,10 +15,7 @@
 
 #main-image {
   text-align: center;
-  max-width: fit-content;
-  align-items: center;
   margin: 0;
-  padding: 2rem;
 }
 
 .font1 {
@@ -44,8 +41,8 @@ ul {
 html {
   background-color: beige;
   max-width: 800px;
-  margin: 10px auto 10px auto;
-  padding: 2rem;
+  margin: 10px;
+  padding: 1rem;
   border: solid 5px #663300;
   border-radius: 20px;
 }

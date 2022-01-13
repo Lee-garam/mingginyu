@@ -6,44 +6,14 @@ import Profile from "./components/Profile";
 import Mainimage from "../src/media/1.jpg";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mode: "welcome",
-      selected_content_id: 1,
-      welcome: { title: "Welcome", desc: "Hello, React!!" },
-      contents: [
-        { id: 1, title: "HTML", desc: "HTML is for information." },
-        { id: 2, title: "CSS", desc: "CSS is for design." },
-        { id: 3, title: "JavaScaript", desc: "JavaScript is for interactive." },
-      ],
-    };
-  }
   render() {
-    var _title,
-      _desc = null;
-    if (this.state.mode === "welcome") {
-      _title = this.state.welcome.title;
-      _desc = this.state.welcome.desc;
-    } else if (this.state.mode === "read") {
-      _title = this.state.contents[0].title;
-      _desc = this.state.contents[0].desc;
-    }
-    var i = 0;
-    while (i < this.state.contents.length) {
-      var data = this.state.contents[i];
-      if (data.id === this.state.selected_content_id) {
-        _title = data.title;
-        _desc = data.desc;
-        break;
-      }
-      i = i + 1;
-    }
     return (
       <div className="App">
-        <h1 className="title1">밍기뉴 팬방 홈페이지</h1>
+        <h1 className="title1">
+          밍기뉴 팬방<br></br> 홈페이지
+        </h1>
         <div id="main-image">
-          <img src={Mainimage}></img>
+          <img src={Mainimage} width={"300px"}></img>
         </div>
         <ul>
           <li>이름: 박서정</li>
@@ -91,6 +61,13 @@ class App extends Component {
         <ul>
           <li>블랙미러</li>
           <li>빅피쉬</li>
+        </ul>
+        <h1 className="title2 font1">밍기뉴의 악기</h1>
+        <hr></hr>
+        <ul>
+          <li>통기타 세고비아 SSM-15C-NST (현재 단종된 모델)</li>
+          <li>클래식기타 모델 원음 Estudio C (40호)</li>
+          <li>우쿨렐레 모델 엔야 EUC-25D</li>
         </ul>
         <p className="font2">
           만든이: 밍기뉴예쁘다<br></br>블로그:{" "}
