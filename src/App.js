@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import TOC from "./components/TOC";
-import Content from "./components/Content";
 import Music from "./components/Music";
 import Profile from "./components/Profile";
 // import meida
@@ -103,14 +100,6 @@ class App extends Component {
           <br></br>
           이메일: lgr421@gmail.com
         </p>
-
-        <TOC
-          onChangePage={function (id) {
-            this.setState({ mode: "read", selected_content_id: Number(id) });
-          }.bind(this)}
-          data={this.state.contents}
-        ></TOC>
-        <Content title={_title} desc={_desc}></Content>
       </div>
     );
   }
