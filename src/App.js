@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import TOC from "./components/TOC";
 import Content from "./components/Content";
@@ -13,7 +14,7 @@ class App extends Component {
     this.state = {
       mode: "welcome",
       selected_content_id: 1,
-      Profile: { title: "Welcome", desc: "Hello, React!!" },
+      welcome: { title: "Welcome", desc: "Hello, React!!" },
       contents: [
         { id: 1, title: "HTML", desc: "HTML is for information." },
         { id: 2, title: "CSS", desc: "CSS is for design." },
@@ -43,9 +44,7 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <a className="title1" href="/">
-          밍기뉴 팬방 홈페이지
-        </a>
+        <h1 className="title1">밍기뉴 팬방 홈페이지</h1>
         <div id="main-image">
           <img src={Mainimage}></img>
         </div>
@@ -53,6 +52,8 @@ class App extends Component {
           <li>이름: 박서정</li>
           <li>생년월일: 1999년 10월 13일</li>
         </ul>
+        <h1 className="title2 font1">밍기뉴 계정</h1>
+        <hr></hr>
         <Profile></Profile>
         <h1 className="title2 font1">밍기뉴 노래</h1>
         <hr></hr>
