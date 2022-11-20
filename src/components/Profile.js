@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import soundcloudImage from "../media/soundcloud.jpg";
 import instagramImage from "../media/instagram.png";
 import youtubeImage from "../media/YouTube.png";
+import "../App.css";
 
 import "./Profile.scss";
 
